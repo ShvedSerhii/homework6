@@ -14,5 +14,5 @@ function isPrime(num) {
 }
 
 function factorial(num) {
-    return num ? num * factorial(num - 1) : 1
+  return num ? num * factorial(num - 1) : 1
 }
