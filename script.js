@@ -68,7 +68,34 @@ function isPalindrome(str) {
 
 function missing(arr) {
   let n = arr.length
+  if (n === 0) {
+    return
+  }
   let totalSum = ((n + 1) * (n + 2)) / 2
   let arrSum = arr.reduce((sum, current) => sum + current)
-  return totalSum - arrSum
+  let result = totalSum - arrSum
+  arr.sort((a, b) => a - b)
+  if (result > arr[n - 1]) {
+    return
+  }
+  return result
+}
+
+function isBalanced(str) {
+  const open = "{"
+  const close = "}"
+  let calcOpen = 0
+  let calcClose = 0
+  for (item of str) {
+    if (item === open) {
+      if (calcClose > 0) {
+        return false
+      }
+      ++calcOpen
+    }
+    if (item === close) {
+      ++calcClose
+    }
+  }
+  return calcOpen === calcClose
 }
