@@ -6,7 +6,7 @@
 
 body {
   height: 100%;
-  background-color: #7656d6;
+  background-color: gray;
   color: #333;
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -20,8 +20,8 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 400px;
-  height: 300px;
+  width: 800px;
+  height: 533px;
   -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
           box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
@@ -29,8 +29,8 @@ body {
 .wrapper {
   overflow: hidden;
   position: relative;
-  width: 400px;
-  height: 300px;
+  width: 800px;
+  height: 533px;
   z-index: 1;
 }
 
@@ -40,7 +40,7 @@ body {
   display: flex;
   position: relative;
   top: 0;
-  left: -400px;
+  left: -800px;
   width: 10000px;
 }
 
@@ -50,8 +50,8 @@ body {
 }
 
 .slide {
-  width: 400px;
-  height: 300px;
+  width: 800px;
+  height: 533px;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,30 +66,7 @@ body {
   -webkit-transition: all 1s;
   transition: all 1s;
   position: relative;
-  background: #ffcf47;
   border-radius: 2px;
-}
-
-.slider.loaded .slide:nth-child(2),
-.slider.loaded .slide:nth-child(7) {
-  background: #ffcf47;
-}
-
-.slider.loaded .slide:nth-child(1),
-.slider.loaded .slide:nth-child(6) {
-  background: #7adcef;
-}
-
-.slider.loaded .slide:nth-child(3) {
-  background: #3cff96;
-}
-
-.slider.loaded .slide:nth-child(4) {
-  background: #a78df5;
-}
-
-.slider.loaded .slide:nth-child(5) {
-  background: #ff8686;
 }
 
 .control {
@@ -114,12 +91,12 @@ body {
 }
 
 .prev {
-  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
+  background-image: url(img/ChevronLeft-512.png);
   left: -20px;
 }
 
 .next {
-  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
+  background-image: url(img/ChevronRight-512.png);
   right: -20px;
 }
 

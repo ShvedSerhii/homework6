@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
-$slider-width: 400px;
-$slider-height: 300px;
+$slider-width: 800px;
+$slider-height: 533px;
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@ $slider-height: 300px;
 
 body {
   height: 100%;
-  background-color: #7656d6;
+  background-color: gray;
   color: #333;
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -56,28 +56,7 @@ body {
   justify-content: center;
   transition: all 1s;
   position: relative;
-  background: #ffcf47;
   border-radius: 2px;
-}
-
-.slider.loaded {
-  .slide:nth-child(2),
-  .slide:nth-child(7) {
-    background: #ffcf47;
-  }
-  .slide:nth-child(1),
-  .slide:nth-child(6) {
-    background: #7adcef;
-  }
-  .slide:nth-child(3) {
-    background: #3cff96;
-  }
-  .slide:nth-child(4) {
-    background: #a78df5;
-  }
-  .slide:nth-child(5) {
-    background: #ff8686;
-  }
 }
 
 .control {
@@ -101,12 +80,12 @@ body {
 }
 
 .prev {
-  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronLeft-512.png);
+  background-image: url(img/ChevronLeft-512.png);
   left: -20px;
 }
 
 .next {
-  background-image: url(https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/ChevronRight-512.png);
+  background-image: url(img/ChevronRight-512.png);
   right: -20px;
 }
 
