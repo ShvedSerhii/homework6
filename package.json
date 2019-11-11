@@ -1,19 +1,33 @@
 {
   "name": "homework6",
   "version": "1.0.0",
-  "description": "homework6 task1",
+  "description": "task1",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ShvedSerhii/homework6.git"
   },
-  "author": "Shved Serhii",
+  "author": "Serhii Shved",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ShvedSerhii/homework6/issues"
   },
-  "homepage": "https://github.com/ShvedSerhii/homework6#readme"
+  "homepage": "https://github.com/ShvedSerhii/homework6#readme",
+  "dependencies": {
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
+  },
+  "devDependencies": {
+    "css-loader": "^3.2.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^4.2.0",
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0"
+  }
 }
