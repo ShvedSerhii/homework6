@@ -19,6 +19,10 @@
   },
   "homepage": "https://github.com/ShvedSerhii/homework6#readme",
   "dependencies": {
+    "extract-loader": "^3.1.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "raw-loader": "^3.1.0",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10"
   },
