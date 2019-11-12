@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-color: gray;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 14px;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 512px;
+  height: 512px;
+  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tagging {
+  overflow: hidden;
+  position: relative;
+  width: 512px;
+  height: 512px;
+  background-image: url("./img/image.jpg");
+}
+
+.tagging-element {
+  padding: 5px 15px;
+  position: absolute;
+  border-radius: 5px;
+  background-color: rgba(34, 34, 34, 0.75);
+  opacity: .9;
+  border: 1px solid #000;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 black;
+          box-shadow: 0 0 black;
+}
+
+.tagging-title {
+  padding: 5px;
+  display: inline-block;
+}
+
+.delete {
+  position: absolute;
+  top: -1px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(34, 34, 34, 0.75);
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+#tag1 {
+  left: 196.672px;
+  top: 305px;
+}
+
+#tag2 {
+  left: 288.172px;
+  top: 213px;
+}
+
+#tag3 {
+  left: 166.672px;
+  top: 125px;
+}
+/*# sourceMappingURL=styles.css.map */

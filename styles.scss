@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+$slider-width: 512px;
+$slider-height: 512px;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  background-color: gray;
+  color: white;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+//   letter-spacing: 0.05em;
+  font-size: 14px;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: $slider-width;
+  height: $slider-height;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tagging {
+  overflow: hidden;
+  position: relative;
+  width: $slider-width;
+  height: $slider-height;
+  background-image: url('./img/image.jpg');
+}
+
+.tagging-element {
+    padding: 5px 15px;
+    position: absolute;
+    border-radius: 5px;
+    background-color: rgba(34,34,34,.75);
+    opacity: .9;
+    border: 1px solid #000;
+    cursor: pointer;
+    box-shadow: 0 0 black;
+}
+
+.tagging-title {
+    padding: 5px;
+    display: inline-block;
+}
+
+.delete {
+    position: absolute;
+    top: -1px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(34,34,34,.75);
+    border: 1px solid #000;
+    cursor: pointer
+}
+
+.hide {
+    visibility: hidden;
+}
+
+#tag1 {
+    left: 196.672px;
+    top: 305px;
+}
+
+#tag2 {
+    left: 288.172px;
+    top: 213px;
+}
+
+#tag3 {
+    left: 166.672px;
+    top: 125px;
+}
