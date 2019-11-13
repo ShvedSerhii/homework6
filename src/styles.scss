@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto");
-
 $slider-width: 800px;
 $slider-height: 533px;
 
@@ -10,11 +8,6 @@ $slider-height: 533px;
 body {
   height: 100%;
   background-color: gray;
-  color: #333;
-  font-family: "Roboto", sans-serif;
-  text-align: center;
-  letter-spacing: 0.15em;
-  font-size: 22px;
 }
 
 .slider {
