@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 
-$slider-width: 512px;
-$slider-height: 512px;
+$width: 512px;
+$height: 512px;
 
 * {
   box-sizing: border-box;
@@ -9,11 +9,9 @@ $slider-height: 512px;
 
 body {
   height: 100%;
-  background-color: gray;
   color: white;
   font-family: "Roboto", sans-serif;
   text-align: center;
-//   letter-spacing: 0.05em;
   font-size: 14px;
 }
 
@@ -22,56 +20,57 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: $slider-width;
-  height: $slider-height;
-  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  width: $width;
+  height: $height;
 }
 
 .tagging {
   overflow: hidden;
   position: relative;
-  width: $slider-width;
-  height: $slider-height;
-  background-image: url('./img/image.jpg');
+  width: $width;
+  height: $height;
+  background-image: url("./img/image.jpg");
 }
 
 .tagging-element {
+  position: absolute;
+
+  .tag {
+    color: white;
+    margin-left: 0px;
+    margin-right: 0px;
     padding: 5px 15px;
-    position: absolute;
-    border-radius: 5px;
-    background-color: rgba(34,34,34,.75);
-    opacity: .9;
+    background-color: rgba(34, 34, 34, 0.75);
+    opacity: 0.9;
     border: 1px solid #000;
     cursor: pointer;
     box-shadow: 0 0 black;
-}
-
-
-.delete {
-    position: absolute;
-    top: -1px;
-    padding: 5px;
     border-radius: 5px;
-    background-color: rgba(34,34,34,.75);
-    border: 1px solid #000;
-    cursor: pointer
+  }
 }
 
 .hide {
-    visibility: hidden;
+  border: none;
+  background: transparent;
+  visibility: hidden;
+  z-index: 10000;
 }
 
 #tag1 {
-    left: 196.672px;
-    top: 305px;
+  left: 196.672px;
+  top: 305px;
 }
 
 #tag2 {
-    left: 288.172px;
-    top: 213px;
+  left: 288.172px;
+  top: 213px;
 }
 
 #tag3 {
-    left: 166.672px;
-    top: 125px;
+  left: 166.672px;
+  top: 125px;
+}
+
+.del {
+  visibility: hidden;
 }

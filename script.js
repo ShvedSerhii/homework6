@@ -1,6 +1,20 @@
-let tags = document.querySelectorAll('.tagging-element')
-for (tag of tags){
-    mouseDown(tag)
+let tags = document.querySelectorAll(".tagging-element");
+for (tag of tags) {
+  mouseDown(tag);
+  hidden(tag);
+}
+
+function hidden(tag) {
+  let hideButton = tag.querySelector("button");
+  tag.onfocus = function() {
+    hideButton.style.visibility = "visible";
+  };
+  tag.onblur = function() {
+    hideButton.style.visibility = "hidden";
+  };
+  hideButton.onmousedown = function() {
+    tag.style.visibility = "hidden";
+  };
 }
 
 function mouseDown(tag) {

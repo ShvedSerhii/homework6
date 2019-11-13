@@ -6,7 +6,6 @@
 
 body {
   height: 100%;
-  background-color: gray;
   color: white;
   font-family: "Roboto", sans-serif;
   text-align: center;
@@ -21,8 +20,6 @@ body {
           transform: translate(-50%, -50%);
   width: 512px;
   height: 512px;
-  -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-          box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .tagging {
@@ -34,34 +31,28 @@ body {
 }
 
 .tagging-element {
-  padding: 5px 15px;
   position: absolute;
-  border-radius: 5px;
+}
+
+.tagging-element .tag {
+  color: white;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 5px 15px;
   background-color: rgba(34, 34, 34, 0.75);
-  opacity: .9;
+  opacity: 0.9;
   border: 1px solid #000;
   cursor: pointer;
   -webkit-box-shadow: 0 0 black;
           box-shadow: 0 0 black;
-}
-
-.tagging-title {
-  padding: 5px;
-  display: inline-block;
-}
-
-.delete {
-  position: absolute;
-  top: -1px;
-  padding: 5px;
   border-radius: 5px;
-  background-color: rgba(34, 34, 34, 0.75);
-  border: 1px solid #000;
-  cursor: pointer;
 }
 
 .hide {
+  border: none;
+  background: transparent;
   visibility: hidden;
+  z-index: 10000;
 }
 
 #tag1 {
@@ -77,5 +68,9 @@ body {
 #tag3 {
   left: 166.672px;
   top: 125px;
+}
+
+.del {
+  visibility: hidden;
 }
 /*# sourceMappingURL=styles.css.map */
