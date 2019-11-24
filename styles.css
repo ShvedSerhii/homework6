@@ -12,22 +12,15 @@ body {
   font-size: 14px;
 }
 
-.wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 512px;
-  height: 512px;
-}
-
 .tagging {
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
   position: relative;
   width: 512px;
   height: 512px;
   background-image: url("./img/image.jpg");
+  border: 1px solid black;
 }
 
 .tagging-element {

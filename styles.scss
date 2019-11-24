@@ -15,21 +15,15 @@ body {
   font-size: 14px;
 }
 
-.wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: $width;
-  height: $height;
-}
-
 .tagging {
+  margin-left: auto;
+  margin-right: auto;
   overflow: hidden;
   position: relative;
   width: $width;
   height: $height;
   background-image: url("./img/image.jpg");
+  border: 1px solid black;
 }
 
 .tagging-element {
