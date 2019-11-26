@@ -5,6 +5,7 @@ const BOTTOM =
   tagging.getBoundingClientRect().y + tagging.getBoundingClientRect().height;
 const RIGHT =
   tagging.getBoundingClientRect().x + tagging.getBoundingClientRect().width;
+const HIDE_BUTTON_WIDTH = 40;
 
 let tags = document.querySelectorAll(".tagging-element");
 for (tag of tags) {
@@ -13,16 +14,24 @@ for (tag of tags) {
 }
 
 function hidden(tag) {
-  let hideButton = tag.querySelector("button");
+ // let hideButton = (tag.getBoundingClientRect().left + tag.getBoundingClientRect().width > RIGHT -  HIDE_BUTTON_WIDTH) ? tag.querySelectorAll("button")[0] : tag.querySelectorAll("button")[1];
   tag.onfocus = function() {
+    let hideButton = (tag.getBoundingClientRect().left + tag.getBoundingClientRect().width > RIGHT -  HIDE_BUTTON_WIDTH) ? tag.querySelectorAll("button")[0] : tag.querySelectorAll("button")[1];
     hideButton.style.visibility = "visible";
+    hideButton.onmousedown = function () {
+      tag.style.visibility = "hidden";
+    }
   };
   tag.onblur = function() {
-    hideButton.style.visibility = "hidden";
+    let hideButton = tag.querySelectorAll("button");
+    for (button of hideButton) {
+      button.style.visibility = "hidden";
+    }
   };
-  hideButton.onmousedown = function() {
-    tag.style.visibility = "hidden";
-  };
+  // hideButton.onmousedown = function() {
+  //   let hideButton = (tag.getBoundingClientRect().left + tag.getBoundingClientRect().width > RIGHT -  HIDE_BUTTON_WIDTH) ? tag.querySelectorAll("button")[0] : tag.querySelectorAll("button")[1];
+  //   tag.style.visibility = "hidden";
+  // };
 }
 
 function mouseDown(tag) {
@@ -32,16 +41,18 @@ function mouseDown(tag) {
 
     tag.style.position = "absolute";
     tag.style.zIndex = 1000;
+
     document.body.append(tag);
 
     moveAt(event.pageX, event.pageY);
 
+
     function moveAt(pageX, pageY) {
       tag.style.left =
-        (pageX - shiftX < LEFT
-          ? LEFT
-          : pageX - shiftX > RIGHT - tag.getBoundingClientRect().width
-          ? RIGHT - tag.getBoundingClientRect().width
+        (pageX - shiftX < LEFT - HIDE_BUTTON_WIDTH
+          ? LEFT - HIDE_BUTTON_WIDTH
+          : pageX - shiftX > RIGHT - tag.getBoundingClientRect().width + HIDE_BUTTON_WIDTH
+          ? RIGHT - tag.getBoundingClientRect().width + HIDE_BUTTON_WIDTH
           : pageX - shiftX) + "px";
       tag.style.top =
         (pageY - shiftY < TOP
@@ -49,14 +60,18 @@ function mouseDown(tag) {
           : pageY - shiftY > BOTTOM - tag.getBoundingClientRect().height
           ? BOTTOM - tag.getBoundingClientRect().height
           : pageY - shiftY) + "px";
+
     }
+
 
     function onMouseMove(event) {
       moveAt(event.pageX, event.pageY);
+      tag.isRight = (tag.getBoundingClientRect().left + tag.getBoundingClientRect().width > RIGHT -  HIDE_BUTTON_WIDTH) ? true : false
 
       tag.hidden = true;
       let elemBelow = document.elementFromPoint(event.clientX, event.clientY);
       tag.hidden = false;
+      
 
       if (!elemBelow) return;
     }
